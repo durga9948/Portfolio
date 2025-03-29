@@ -5,8 +5,7 @@ import { Link } from 'react-scroll';
 
 function App() {
   const sections = [
-    { id: 'about', label: 'About' },
-    { id: 'experiences', label: 'Experiences' },
+    { id: 'education-experience', label: 'Education & Experience' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'achievements', label: 'Achievements' },
@@ -55,18 +54,46 @@ function App() {
         </div>
       </header>
 
-      {/* Experiences Section */}
-      <section className="experiences section" id="experiences">
-        <h2>Experiences</h2>
-        <div className="experience-item">
-          <h3>Software Developer - [Company Name]</h3>
-          <p><em>June 2022 - Present</em></p>
-          <p>Developed scalable web applications using React and Node.js.</p>
-        </div>
-        <div className="experience-item">
-          <h3>Junior Developer - [Company Name]</h3>
-          <p><em>Jan 2020 - May 2022</em></p>
-          <p>Collaborated on RESTful APIs and optimized database queries.</p>
+      {/* Combined Education and Experience Section */}
+      <section className="education-experience section" id="education-experience">
+        <div className="timeline-container">
+          {/* Education Timeline */}
+          <div className="timeline education-timeline">
+            <h2>Education</h2>
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h3>[Degree, e.g., B.S. in Computer Science] - [University Name]</h3>
+                <p><em>[Graduation Year, e.g., May 2020]</em></p>
+                <p>[Details, e.g., Graduated with honors, GPA: 3.8/4.0]</p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h3>[Another Degree or Certification] - [Institution Name]</h3>
+                <p><em>[Year, e.g., June 2018]</em></p>
+                <p>[Details, e.g., Specialized in Web Development]</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Experience Timeline */}
+          <div className="timeline experience-timeline">
+            <h2>Experience</h2>
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h3>Software Developer - [Company Name]</h3>
+                <p><em>June 2022 - Present</em></p>
+                <p>Developed scalable web applications using React and Node.js.</p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h3>Junior Developer - [Company Name]</h3>
+                <p><em>Jan 2020 - May 2022]</em></p>
+                <p>Collaborated on RESTful APIs and optimized database queries.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

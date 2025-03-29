@@ -36,7 +36,7 @@ body {
 .App {
   position: relative;
   min-height: 100vh;
-  max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -45,16 +45,18 @@ body {
   position: sticky;
   top: 0;
   background: rgba(168, 202, 186, 0.9);
-  padding: 10px 0;
+  padding: 10px 20px;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .nav-title {
@@ -93,16 +95,14 @@ body {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   animation: fadeIn 1s ease-in;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
   gap: 30px;
 }
 
@@ -154,38 +154,88 @@ body {
 /* Sections */
 .section {
   padding: 40px 20px;
-  margin: 20px auto;
-  max-width: 1000px;
-  border-radius: 15px;
-  background-color: #fff8e1;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   animation: fadeIn 1s ease-in;
 }
 
 .section h2 {
   color: #6b8e4e;
   font-family: 'Georgia', serif;
-  text-align: center;
+  text-align: left;
   margin: 0 0 20px 0;
   font-size: 32px;
 }
 
-/* Experiences */
-.experience-item {
-  background-color: #d9e4c7;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  transition: transform 0.3s;
+/* Education and Experience Combined */
+.education-experience {
+  padding: 40px 20px;
 }
 
-.experience-item:hover {
-  transform: translateX(5px);
+.timeline-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 40px;
 }
 
-.experience-item h3 {
+.timeline {
+  position: relative;
+  width: 50%;
+}
+
+.education-timeline::before,
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #6b8e4e;
+  top: 60px;
+  /* Start below the heading */
+  bottom: 0;
+  left: 8px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.timeline-content {
+  margin-left: 30px;
+  width: calc(100% - 40px);
+}
+
+.timeline-content h3 {
   color: #4a7042;
   margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  margin: 5px 0;
+}
+
+.timeline-content em {
+  color: #8a7f6b;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #8c5523;
+  border-radius: 50%;
+  top: 20px;
+  left: 0;
+  z-index: 1;
 }
 
 /* Skills */
@@ -221,6 +271,10 @@ body {
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-card {
@@ -305,4 +359,5 @@ body {
   background: linear-gradient(to top, #a8caba, #f0f4e6);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  width: 100%;
 }
