@@ -1,19 +1,51 @@
 import React from 'react';
 import './App.css';
-import profilePic from './assets/profile-pic.jpg'; // Placeholder for your image
+import profilePic from './assets/profile-pic.jpg'; // Your profile picture
+import { Link } from 'react-scroll';
 
 function App() {
+  const sections = [
+    { id: 'about', label: 'About' },
+    { id: 'experiences', label: 'Experiences' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'achievements', label: 'Achievements' },
+    { id: 'recommendations', label: 'Recommendations' },
+    { id: 'contact', label: 'Contact' },
+  ];
+
   return (
     <div className="App">
+      {/* Navigation */}
+      <nav className="navbar">
+        <div className="nav-content">
+          <h1 className="nav-title">[Your Name]</h1>
+          <ul className="nav-links">
+            {sections.map((section) => (
+              <li key={section.id}>
+                <Link
+                  to={section.id}
+                  smooth={true}
+                  duration={500}
+                  className="nav-link"
+                >
+                  {section.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+
       {/* Header Section */}
-      <header className="header">
+      <header className="header" id="header">
         <img src={profilePic} alt="[Your Name]" className="profile-pic" />
-        <h1>[Your Name]</h1>
+        <h1 className="header-title">[Your Name]</h1>
         <p>Software Developer | Ghibli Enthusiast</p>
       </header>
 
       {/* About Me Section */}
-      <section className="about">
+      <section className="about section" id="about">
         <h2>About Me</h2>
         <p>
           I'm a dedicated software developer with a love for crafting elegant solutions,
@@ -24,22 +56,22 @@ function App() {
       </section>
 
       {/* Experiences Section */}
-      <section className="experiences">
+      <section className="experiences section" id="experiences">
         <h2>Experiences</h2>
         <div className="experience-item">
           <h3>Software Developer - [Company Name]</h3>
           <p><em>June 2022 - Present</em></p>
-          <p>Developed scalable web applications using React and Node.js, improving user experience by 30%.</p>
+          <p>Developed scalable web applications using React and Node.js.</p>
         </div>
         <div className="experience-item">
           <h3>Junior Developer - [Company Name]</h3>
           <p><em>Jan 2020 - May 2022</em></p>
-          <p>Collaborated on a team to build RESTful APIs and optimized database queries.</p>
+          <p>Collaborated on RESTful APIs and optimized database queries.</p>
         </div>
       </section>
 
       {/* Technical Skills Section */}
-      <section className="skills">
+      <section className="skills section" id="skills">
         <h2>Technical Skills</h2>
         <ul className="skills-list">
           <li>JavaScript (React, Node.js)</li>
@@ -52,7 +84,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section className="projects">
+      <section className="projects section" id="projects">
         <h2>Projects</h2>
         <div className="project-grid">
           <div className="project-card">
@@ -73,31 +105,31 @@ function App() {
         </div>
       </section>
 
-      {/* Other Achievements Section */}
-      <section className="achievements">
+      {/* Achievements Section */}
+      <section className="achievements section" id="achievements">
         <h2>Other Achievements</h2>
         <ul>
-          <li>Won 1st Place at [Hackathon Name] 2023 for [Project Name]</li>
+          <li>Won 1st Place at [Hackathon Name] 2023</li>
           <li>Published an article on [Topic] in [Publication]</li>
-          <li>Contributed to open-source project [Project Name]</li>
+          <li>Contributed to [Project Name]</li>
         </ul>
       </section>
 
       {/* Recommendations Section */}
-      <section className="recommendations">
+      <section className="recommendations section" id="recommendations">
         <h2>Recommendations</h2>
         <div className="recommendation-item">
-          <p>"[Your Name] is a talented developer with a keen eye for detail. Their work ethic is exceptional!"</p>
+          <p>"[Your Name] is a talented developer with exceptional work ethic!"</p>
           <p><em>- [Name], [Title], [Company]</em></p>
         </div>
         <div className="recommendation-item">
-          <p>"Working with [Your Name] was a delight. Their creative solutions elevated our project."</p>
+          <p>"Their creative solutions elevated our project."</p>
           <p><em>- [Name], [Title], [Company]</em></p>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="contact">
+      <section className="contact section" id="contact">
         <h2>Contact Me</h2>
         <p>Email: your.email@example.com</p>
         <p>GitHub: github.com/yourusername</p>
