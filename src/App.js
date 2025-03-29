@@ -8,9 +8,8 @@ function App() {
     { id: 'education-experience', label: 'Education & Experience' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
-    { id: 'achievements', label: 'Achievements' },
     { id: 'recommendations', label: 'Recommendations' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'achievements-contact', label: 'Achievements & Contact' },
   ];
 
   return (
@@ -132,35 +131,35 @@ function App() {
         </div>
       </section>
 
-      {/* Achievements Section */}
-      <section className="achievements section" id="achievements">
-        <h2>Other Achievements</h2>
-        <ul>
-          <li>Won 1st Place at [Hackathon Name] 2023</li>
-          <li>Published an article on [Topic] in [Publication]</li>
-          <li>Contributed to [Project Name]</li>
-        </ul>
-      </section>
-
       {/* Recommendations Section */}
       <section className="recommendations section" id="recommendations">
         <h2>Recommendations</h2>
-        <div className="recommendation-item">
-          <p>"[Your Name] is a talented developer with exceptional work ethic!"</p>
-          <p><em>- [Name], [Title], [Company]</em></p>
-        </div>
-        <div className="recommendation-item">
-          <p>"Their creative solutions elevated our project."</p>
-          <p><em>- [Name], [Title], [Company]</em></p>
+        <div className="recommendations-container">
+          <div className="recommendation-bubble bubble-large">
+            <p>"[Your Name] is a talented developer with exceptional work ethic!"</p>
+            <p><em>- [Name], [Title], [Company]</em></p>
+          </div>
+          <div className="recommendation-bubble bubble-medium">
+            <p>"Their creative solutions elevated our project."</p>
+            <p><em>- [Name], [Title], [Company]</em></p>
+          </div>
+          <div className="recommendation-bubble bubble-small">
+            <p>"A true team player with brilliant ideas!"</p>
+            <p><em>- [Name], [Title], [Company]</em></p>
+          </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="contact section" id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: your.email@example.com</p>
-        <p>GitHub: github.com/yourusername</p>
-        <p>LinkedIn: linkedin.com/in/yourusername</p>
+      {/* Combined Achievements and Contact Section */}
+      <section className="achievements-contact section" id="achievements-contact">
+        <div className="achievements-contact-container">
+          <div className="contact">
+            <h2>Contact Me</h2>
+            <p>Email: your.email@example.com</p>
+            <p>GitHub: github.com/yourusername</p>
+            <p>LinkedIn: linkedin.com/in/yourusername</p>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}

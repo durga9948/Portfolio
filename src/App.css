@@ -33,6 +33,60 @@ body {
   }
 }
 
+@keyframes floatWobble {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(-15px) rotate(-5deg);
+  }
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(139, 176, 139, 0.5);
+  }
+
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(139, 176, 139, 0.8);
+  }
+}
+
+@keyframes swaySpin {
+
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateX(10px) rotate(10deg);
+  }
+
+  50% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  75% {
+    transform: translateX(-10px) rotate(-10deg);
+  }
+}
+
 .App {
   position: relative;
   min-height: 100vh;
@@ -138,8 +192,8 @@ body {
 }
 
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   border: 5px solid #fff8e1;
   object-fit: cover;
@@ -262,13 +316,9 @@ body {
 
 .project-grid {
   display: flex;
-  /* Reverted to flex for three items in a row */
   flex-wrap: wrap;
-  /* Allow wrapping if screen is too small */
   justify-content: flex-start;
-  /* Left-align items instead of center */
   gap: 30px;
-  /* Space between cards */
   margin-top: 20px;
   max-width: 1200px;
   width: 100%;
@@ -279,7 +329,6 @@ body {
 .project-card {
   background-color: #d9e4c7;
   width: calc(33.33% - 60px);
-  /* Three items per row with gap adjustment */
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -288,7 +337,6 @@ body {
   position: relative;
   cursor: pointer;
   text-align: left;
-  /* Text inside remains left-aligned */
 }
 
 .project-card:hover {
@@ -319,43 +367,96 @@ body {
   color: #6b8e4e;
 }
 
-/* Achievements */
-.achievements ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 0;
-  text-align: left;
-}
-
 /* Recommendations */
 .recommendations {
   text-align: left;
 }
 
-.recommendation-item {
+.recommendations-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.recommendation-bubble {
   background-color: #d9e4c7;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  transition: transform 0.3s;
+  border-radius: 50%;
+  padding: 20px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 250px;
 }
 
-.recommendation-item:hover {
-  transform: translateX(5px);
+.recommendation-bubble:nth-child(1) {
+  animation: floatWobble 5s ease-in-out infinite;
 }
 
-.recommendation-item em {
-  color: #8a7f6b;
+.recommendation-bubble:nth-child(2) {
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
-/* Contact */
-.contact {
-  text-align: left;
+.recommendation-bubble:nth-child(3) {
+  animation: swaySpin 4s ease-in-out infinite;
 }
 
-.contact p {
+.recommendation-bubble:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}
+
+.recommendation-bubble p {
   margin: 5px 0;
+  font-size: 16px;
+}
+
+.recommendation-bubble em {
+  color: #8a7f6b;
+  font-size: 14px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 40px 20px;
+  background: linear-gradient(to top, #a8caba, #f0f4e6);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-cloud {
+  background: rgba(255, 248, 225, 0.9);
+  padding: 20px 30px;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.contact-cloud p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.contact-cloud a {
+  color: #8c5523;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-cloud a:hover {
+  color: #6b8e4e;
 }
 
 /* Footer */
