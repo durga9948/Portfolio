@@ -37,23 +37,23 @@ function App() {
         </div>
       </nav>
 
-      {/* Header Section */}
+      {/* Header Section with About Me */}
       <header className="header" id="header">
-        <img src={profilePic} alt="[Your Name]" className="profile-pic" />
-        <h1 className="header-title">[Your Name]</h1>
-        <p>Software Developer | Ghibli Enthusiast</p>
+        <div className="header-content">
+          <div className="about-me">
+            <h1 className="header-title">[Your Name]</h1>
+            <p className="subtitle">Software Developer | Ghibli Enthusiast</p>
+            <h2>About Me</h2>
+            <p>
+              I'm a dedicated software developer with a love for crafting elegant solutions,
+              inspired by the imaginative worlds of Studio Ghibli.
+              With a background in [your field], I bring creativity and precision to every project.
+              In my free time, I enjoy [hobbies, e.g., sketching, exploring nature].
+            </p>
+          </div>
+          <img src={profilePic} alt="[Your Name]" className="profile-pic" />
+        </div>
       </header>
-
-      {/* About Me Section */}
-      <section className="about section" id="about">
-        <h2>About Me</h2>
-        <p>
-          I'm a dedicated software developer with a love for crafting elegant solutions,
-          inspired by the serene and imaginative worlds of Studio Ghibli.
-          With a background in [your field], I bring creativity and precision to every project.
-          In my free time, I enjoy [hobbies, e.g., sketching, exploring nature].
-        </p>
-      </section>
 
       {/* Experiences Section */}
       <section className="experiences section" id="experiences">
@@ -89,17 +89,17 @@ function App() {
         <div className="project-grid">
           <div className="project-card">
             <h3>Totoro's Task Manager</h3>
-            <p>A React-based task app with a forest-inspired UI.</p>
+            <p>A React-based task app with a vibrant UI.</p>
             <a href="#">View Project</a>
           </div>
           <div className="project-card">
             <h3>Spirited Blog</h3>
-            <p>A full-stack blogging platform with mystical animations.</p>
+            <p>A full-stack blogging platform with bold animations.</p>
             <a href="#">View Project</a>
           </div>
           <div className="project-card">
             <h3>Kiki's Delivery API</h3>
-            <p>A Node.js API for tracking deliveries, Ghibli-style.</p>
+            <p>A Node.js API for tracking deliveries, dynamically styled.</p>
             <a href="#">View Project</a>
           </div>
         </div>
