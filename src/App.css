@@ -98,7 +98,8 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(168, 202, 186, 0.9);
+  background: linear-gradient(to right, #8c5523, rgba(168, 202, 186, 0.9));
+  /* Added #8c5523 to navbar gradient */
   padding: 10px 20px;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -109,29 +110,36 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
 .nav-title {
-  font-size: 24px;
-  color: #6b8e4e;
+  font-size: 28px;
+  /* Slightly increased from 24px */
+  color: #fff8e1;
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'Brush Script MT', cursive;
+  /* Changed from Georgia */
+  font-weight: 900;
+  /* Bold for emphasis */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  /* Added for depth */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   padding: 0;
+  margin-left: 50px;
 }
 
 .nav-link {
   color: #3a4f39;
   text-decoration: none;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 5px 8px;
   transition: color 0.3s, background-color 0.3s;
   cursor: pointer;
 }
@@ -166,10 +174,16 @@ body {
 }
 
 .header-title {
-  font-size: 42px;
-  color: #6b8e4e;
+  font-size: 48px;
+  /* Slightly increased from 42px */
+  color: #8c5523;
   margin: 0 0 5px 0;
-  font-family: 'Georgia', serif;
+  font-family: 'Clicker Script', cursive;
+  /* Changed from Georgia */
+  font-weight: 700;
+  /* Bold for emphasis */
+  animation: floatName 3s ease-in-out infinite;
+  display: inline-block;
 }
 
 .subtitle {
@@ -179,7 +193,8 @@ body {
 }
 
 .about-me h2 {
-  color: #6b8e4e;
+  color: #8c5523;
+  /* Changed from #6b8e4e to #8c5523 */
   font-family: 'Georgia', serif;
   font-size: 28px;
   margin: 0 0 10px 0;
@@ -195,10 +210,12 @@ body {
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  border: 5px solid #fff8e1;
+  border: 5px solid #8c5523;
+  /* Changed from #fff8e1 to #8c5523 */
   object-fit: cover;
   transition: transform 0.3s;
   flex-shrink: 0;
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 .profile-pic:hover {
@@ -217,7 +234,8 @@ body {
 }
 
 .section h2 {
-  color: #6b8e4e;
+  color: #8c5523;
+  /* Changed from #6b8e4e to #8c5523 */
   font-family: 'Georgia', serif;
   text-align: left;
   margin: 0 0 20px 0;
@@ -249,6 +267,7 @@ body {
   position: absolute;
   width: 4px;
   background-color: #6b8e4e;
+  /* Changed from #6b8e4e to #8c5523 */
   top: 60px;
   bottom: 0;
   left: 6px;
@@ -328,10 +347,12 @@ body {
 
 .project-card {
   background-color: #d9e4c7;
-  width: calc(33.33% - 60px);
+  width: calc(33.33% - 65px);
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #8c5523;
+  /* Added #8c5523 border */
   transition: all 0.5s ease;
   transform-style: preserve-3d;
   position: relative;
@@ -358,6 +379,7 @@ body {
 
 .project-card a {
   color: #8c5523;
+  /* Already #8c5523, kept as is */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -390,6 +412,8 @@ body {
   flex-direction: column;
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c5523;
+  /* Added #8c5523 border */
   width: 250px;
   height: 250px;
 }
@@ -424,7 +448,8 @@ body {
 /* Contact Section */
 .contact {
   padding: 40px 20px;
-  background: linear-gradient(to top, #a8caba, #f0f4e6);
+  background: linear-gradient(to top, #d9e4c7, #f0f4e6);
+  /* Changed gradient to start with #8c5523 */
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
@@ -442,6 +467,8 @@ body {
   border-radius: 25px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   display: inline-block;
+  border: 2px solid #8c5523;
+  /* Added #8c5523 border */
 }
 
 .contact-cloud p {
@@ -465,8 +492,7 @@ body {
   padding: 20px;
   color: #8a7f6b;
   font-size: 14px;
-  background: linear-gradient(to top, #a8caba, #f0f4e6);
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  background: linear-gradient(to right, #8c5523, rgba(168, 202, 186, 0.9));
+  /* Changed gradient to start with #8c5523 */
   width: 100%;
 }

@@ -9,7 +9,7 @@ function App() {
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'recommendations', label: 'Recommendations' },
-    { id: 'achievements-contact', label: 'Achievements & Contact' },
+    { id: 'achievements-contact', label: 'Contact' },
   ];
 
   return (
@@ -17,7 +17,7 @@ function App() {
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-content">
-          <h1 className="nav-title">[Your Name]</h1>
+          <h1 className="nav-title">DB Chunduri</h1>
           <ul className="nav-links">
             {sections.map((section) => (
               <li key={section.id}>
@@ -25,6 +25,7 @@ function App() {
                   to={section.id}
                   smooth={true}
                   duration={500}
+                  offset={-70}
                   className="nav-link"
                 >
                   {section.label}
@@ -39,9 +40,8 @@ function App() {
       <header className="header" id="header">
         <div className="header-content">
           <div className="about-me">
-            <h1 className="header-title">[Your Name]</h1>
+            <h1 className="header-title">Durga Bhavani Chunduri</h1>
             <p className="subtitle">Software Developer | Ghibli Enthusiast</p>
-            <h2>About Me</h2>
             <p>
               I'm a dedicated software developer with a love for crafting elegant solutions,
               inspired by the imaginative worlds of Studio Ghibli.
